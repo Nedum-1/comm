@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h1>S<span>hopage</span></h1>
+        <div class="link link1">
+            <a href="#">Help</a>
+            <a href="#">Promo</a>
+            <a href="#">Explore</a>
+        </div>
+        <div class="link link2">
+            <a href="#">Affiliate</a>
+            <a href="#">FAQ's</a>
+            <a href="#">About Us</a>
+            <a href="#" id="login">Login</a>
+        </div>
+        <div class="ppic"></div>
+    </header>
+    <main>
+        <div class="welcome">
+            <h2>
+                Welcome to <span>Shopage</span>, The Biggest Student E-Commerce Platform.
+            </h2>
+            <a href="#">Explore+</a>
+        </div>
+        <div class="create">
+            <form onsubmit="validate()">
+                <input type="text" placeholder="Enter Username" id="username">
+                <p class="already" id="user"></p>
+
+                <input type="text" placeholder="Email" id="email">
+                <p class="already" id="em"></p>
+
+                <input type="password" placeholder="Create Password" id="password">
+                <input type="password" placeholder="Confirm Password" id="confirm-password">
+                <input type="submit" value="Sign Up" id="submit">
+            </form>
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>
