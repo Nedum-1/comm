@@ -14,22 +14,34 @@ test =()=>{
         back.style.display = "block"
     })
     document.addEventListener('touchmove', (e)=>{
+        
         move = e.changedTouches[0].screenX;
-        var yess = move - start
+         yess = move-start
+         yes = yess/2
         if(yess >= 0){
-            front.style.marginLeft = yess+"vw"
+            front.style.marginLeft = yes+"vw"
             return;
         }
     })
     document.addEventListener('touchend', (e)=>{
         end = e.changedTouches[0].screenX;
-        if(front.style.marginLeft >= 30+'vw'){
+        if(yes >= 30){
             front.style.transition = '0.2s'
             front.style.marginLeft = '100vw'
-        }else{
+        }
+        if(yes < 30){
             front.style.transition = '0.2s'
             front.style.marginLeft = '0vw'
         }
+        setInterval(
+            function(){
+                if(front.style.marginLeft == '100vw'){
+                    front.style.display = "none"
+                }
+            }
+            ,100
+        )
+        
     })
     
 }

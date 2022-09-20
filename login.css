@@ -45,7 +45,7 @@ h1 {
 .link2 {
     float: right;
 }
-#login{
+#login {
     border: 2px solid green;
     color: white;
     border-radius: 50px;
@@ -169,9 +169,9 @@ input {
         background-image: url('Img/login.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        
         position: fixed;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
     }
     #back {
