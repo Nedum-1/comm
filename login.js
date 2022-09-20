@@ -1,65 +1,36 @@
-var username = document.querySelector('#username')
-var email = document.querySelector('#email')
-var password = document.querySelector('#password')
-var confirm_password = document.querySelector('#confirm-password')
-var submit = document.querySelector('#submit')
-
-async function storedinfo(){
-    const res = await fetch('http://localhost:3000/posts');
-
-    const data = await res.json()
-
-    return data;
+validate = function(){
+    event.preventDefault()
+    location.href = 'shopage.html'
 }
+var front = document.getElementById('front')
+var back = document.getElementById('back')
 
-var info = []
-
-info = finfo()
-async function finfo(){
-    const res = await storedinfo()
-    info = res
-
-    username.addEventListener('input', ()=>{
-        for(var i = 0; i < info.length; i++){
-            if(username.value == info[i].username){
-                document.getElementById('user').innerHTML = "Username already taken"
-                return;
-            }
+test =()=>{
+    var start = 0
+    var move
+    var end = 0
+    document.addEventListener('touchstart', (e)=>{
+        start = e.changedTouches[0].screenX;
+        back.style.display = "block"
+    })
+    document.addEventListener('touchmove', (e)=>{
+        move = e.changedTouches[0].screenX;
+        var yess = move-start
+        if(yess >= 0){
+            front.style.marginLeft = yess+"vw"
+            return;
         }
-        document.getElementById('user').innerHTML = ""
     })
-
-    email.addEventListener('input', ()=>{
-        for(var i = 0; i < info.length; i++){
-            if(email.value == info[i].email){
-                document.getElementById('em').innerHTML = "This email already exists"
-                document.getElementById('email').style.borderColor = "red"
-                return;
-            }
+    document.addEventListener('touchend', (e)=>{
+        end = e.changedTouches[0].screenX;
+        if(front.style.marginLeft >= 30+'vw'){
+            front.style.transition = '0.2s'
+            front.style.marginLeft = '100vw'
+        }else{
+            front.style.transition = '0.2s'
+            front.style.marginLeft = '0vw'
         }
-        document.getElementById('em').innerHTML = ""
     })
+    
 }
-
-
-console.log(info)
-async function validate(){
-
-var newinfo = {
-    username: username.value,
-    email: email.value,
-    password: password.value
-} 
-    const res = await storedinfo()
-    info = res
-    info = [newinfo, ...info]
-
-    const rest = await fetch('http://localhost:3000/posts', {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-          },
-          body: JSON.stringify(newinfo)
-    })
-}
-
+test()

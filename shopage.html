@@ -5,40 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shopagestyle.css">
+    <script src="https://kit.fontawesome.com/76acaa6079.js"></script>
     <title>Shop page</title>
 </head>
 <body>
     <header>
         <h1>S<span>hopage</span></h1>
-        <div class="ppic"></div>
-    </header>
-    <div class="content">
-        <nav>
-            <div class="info">
-                <img src="" alt="">
-                <h2 id="name">Cardio</h2>
-                <h3 id="country">Nigeria</h3>
+        <div class="top">
+            
+            <div class="top-menu">
+                <a href="#" id="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-no">3</span></a>
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
             </div>
-        </nav>
+        </div>
+    </header>
+    <nav id="sidenav">
+
+        
+    </nav>
+
         <main>
             <div class="top">
                 <div class="links">
-                    <a href="#">Gadgets & Accessories</a>
-                    <a href="#">Clothing & Fashion </a>
-                    <a href="#">Books and stationaries</a>
-                    <a href="#">Food & Grocery</a>
-                    <a href="#">Jewlry and Watches</a>
-                    <a href="#">Health and personal care</a>
-                </div>
-                <div class="search">
-                    <input type="text" placeholder="Search" id="search_bar">
-                    <i class="fas fa-search">1</i>
+                    <a href="#">Past Questions</a>
+                    <a href="#">Practical Materials </a>
+                    <a href="#">Textbooks </a>
+                    <a href="#">Accesories </a>
+                    <a href="#">Maths Accesories </a>
+                    <a href="#">Lab Materials </a>
+                    <div class="search">
+                        <input type="text" placeholder="Search" id="search_bar">
+                        <i class="fas fa-search"></i>
+                    </div>
                 </div>
             </div>
+
             <!--Recommended section-->
             <p id="prec">Recommended</p>
+            <div id="recommended" class="recommended">
+                
+            </div>
+
+            <p id="prec">Trending</p>
             <div class="recommended">
                 <!--First Product-->
+                <div id="rec1" class="rec">
+                    <img src="" alt="">
+                    <div class="details">
+                        <span class="name">
+                            Samsung Galaxy S10
+                        </span>
+                        <span class="rating">
+                            Rating:
+                        </span>
+                        <span class="purchase" >
+                            <span class="amount">$628.99</span>
+                            <button class="add">Add to cart</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="rec1" class="rec">
+                    <img src="" alt="">
+                    <div class="details">
+                        <span class="name">
+                            Samsung Galaxy S10
+                        </span>
+                        <span class="rating">
+                            Rating:
+                        </span>
+                        <span class="purchase" >
+                            <span class="amount">$628.99</span>
+                            <button class="add">Add to cart</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="rec1" class="rec">
+                    <img src="" alt="">
+                    <div class="details">
+                        <span class="name">
+                            Samsung Galaxy S10
+                        </span>
+                        <span class="rating">
+                            Rating:
+                        </span>
+                        <span class="purchase" >
+                            <span class="amount">$628.99</span>
+                            <button class="add">Add to cart</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="rec1" class="rec">
+                    <img src="" alt="">
+                    <div class="details">
+                        <span class="name">
+                            Samsung Galaxy S10
+                        </span>
+                        <span class="rating">
+                            Rating:
+                        </span>
+                        <span class="purchase" >
+                            <span class="amount">$628.99</span>
+                            <button class="add">Add to cart</button>
+                        </span>
+                    </div>
+                </div>
+
                 <div id="rec1" class="rec">
                     <img src="" alt="">
                     <div class="details">
@@ -123,11 +199,11 @@
                     </div>
                 </div>
             </div>
-
+          
 
              <!--Bestselling section-->
              <p id="prec">Bestselling</p>
-             <div class="bestselling">
+             <div class="bestselling" id="bestselling">
                  <!--First Product-->
                  <div id="rec1" class="best">
                      <img src="" alt="">
@@ -213,7 +289,8 @@
                      </div>
                  </div>
              </div>
+             
         </main>
-    </div>
+        <script src="shop.js"></script>
 </body>
 </html>
