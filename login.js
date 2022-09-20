@@ -15,7 +15,7 @@ test =()=>{
     })
     document.addEventListener('touchmove', (e)=>{
         move = e.changedTouches[0].screenX;
-        var yess = move-start
+        var yess = move - start
         if(yess >= 0){
             front.style.marginLeft = yess+"vw"
             return;

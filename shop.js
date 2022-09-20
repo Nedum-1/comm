@@ -1,4 +1,4 @@
-var recommended = document.querySelector('#recommended')
+var recommended = document.querySelector('#recommended');
 var bestselling = document.querySelector('#bestselling')
 var cart = document.querySelector('#cart-no')
 var add = document.querySelector('.add')

@@ -1,4 +1,4 @@
-var image1 = document.querySelector('#image1')
+var image1 = document.querySelector('#image1');
 var price = document.querySelector('#price')
 var product_name = document.querySelector('#name')
 var rating = document.querySelector('#rating')
