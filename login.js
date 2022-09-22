@@ -12,27 +12,24 @@ test =()=>{
     document.addEventListener('touchstart', (e)=>{
         start = e.changedTouches[0].screenX;
         back.style.display = "block"
+        front.style.transition = '0s'
     })
     document.addEventListener('touchmove', (e)=>{
-        
+        width = screen.width*0.3
         move = e.changedTouches[0].screenX;
          yess = move-start
-         yes = yess/2
         if(yess >= 0){
-            front.style.marginLeft = yes+"vw"
+            front.style.marginLeft = yess+"px"
             return;
         }
     })
     document.addEventListener('touchend', (e)=>{
         end = e.changedTouches[0].screenX;
-        if(yes >= 30){
+        if(front.style.marginLeft > width+'px'){
             front.style.transition = '0.2s'
             front.style.marginLeft = '100vw'
         }
-        if(yes < 30){
-            front.style.transition = '0.2s'
-            front.style.marginLeft = '0vw'
-        }
+        
         setInterval(
             function(){
                 if(front.style.marginLeft == '100vw'){
