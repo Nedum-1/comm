@@ -61,6 +61,8 @@ header span {
     font-size: 13px;
     text-align: center;
 }
+
+/*SIDE NAV*/
 nav {
     position: fixed;
     top: 55px;
@@ -82,8 +84,10 @@ nav {
     max-height: 230px;
     background: var(--recommended);
     padding: 8px;
+    white-space: nowrap;
     overflow-x: auto;
 }
+
 
 .rec, .best {
    background-color: white; 
@@ -160,4 +164,19 @@ span .amount {
     border-radius: 50px 0px 0px 50px;
     width: 250px;
     outline: none;
+}
+
+
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+    main {
+        width: 100%;
+        float: left;
+        margin-top: 100px;
+    }
+    header {
+        flex-direction: column;
+    }
 }

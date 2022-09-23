@@ -1,3 +1,4 @@
+//LOGIN FUNCTION
 validate = function(){
     event.preventDefault()
     location.href = 'shopage.html'
@@ -5,6 +6,7 @@ validate = function(){
 var front = document.getElementById('front')
 var back = document.getElementById('back')
 
+//SLIDE TO  (FOR MOBILE VIEW)
 test =()=>{
     var start = 0
     var move
@@ -15,19 +17,23 @@ test =()=>{
         front.style.transition = '0s'
     })
     document.addEventListener('touchmove', (e)=>{
-        width = screen.width*0.3
         move = e.changedTouches[0].screenX;
-         yess = move-start
-        if(yess >= 0){
-            front.style.marginLeft = yess+"px"
+         dist = move-start
+        if(dist >= 0){
+            front.style.marginLeft = dist+"px"
             return;
         }
     })
     document.addEventListener('touchend', (e)=>{
+        console.log()
         end = e.changedTouches[0].screenX;
-        if(front.style.marginLeft > width+'px'){
+        if(dist >= 90){
             front.style.transition = '0.2s'
             front.style.marginLeft = '100vw'
+        }
+        if(dist < 90){
+            front.style.transition = '0.2s'
+            front.style.marginLeft = '0vw'
         }
         
         setInterval(
