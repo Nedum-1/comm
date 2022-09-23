@@ -133,7 +133,6 @@ span .amount {
 .links a {
     text-decoration: none;
     color: black;
-    font-family: cursive;
     font-size: 13px;
     padding: 10px;
     border: 2px solid green;
@@ -168,15 +167,80 @@ span .amount {
 
 
 @media (max-width: 700px) {
+    header {
+        background: white;
+        flex-direction: column;
+        padding: 0;
+        border: 1px solid black;
+    }
+    header span {
+        background-color: lightgreen;
+        color: white;
+    }
+    h1 {
+        margin: 9px;
+        color: white;
+        background-color: green;
+        width: fit-content;
+    }
+    #line {
+        height: 1px;
+        width: 100%;
+        background-color: #000000;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .top-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .top-menu a {
+        font-weight: 700;
+        position: relative;
+        background-color: transparent;
+        color: black;
+    }
+    #active,
+    .top-menu a:hover{
+        color: green;
+    }
+    #active::after,
+    .top-menu a:hover::after{
+        content: "";
+        color: red;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: green;
+        height: 3px;
+        width: 30px;
+    } 
     nav {
         display: none;
     }
     main {
         width: 100%;
         float: left;
-        margin-top: 100px;
+        margin-top: 120px;
     }
-    header {
-        flex-direction: column;
+    .search {
+        position: fixed;
+        top: 10px;
+        right: 0;
+        width: fit-content;
+        background: white;
+        transition: 1s;
+        border: none;
+    }
+    #search_bar {
+        transition: 1s;
+        width: 0px;
+    }
+    .fa-search {
+        background-color: white;
+        color:gray;
     }
 }

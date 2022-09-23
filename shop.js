@@ -115,5 +115,20 @@ put =(val)=>{
 } 
 products.forEach(put)
 
+// SEARCH BAR 
+var search_bar = document.querySelector('#search_bar')
+var search = document.querySelector('.search')
+var search_button = document.querySelector('#search_button')
+
+search_button.addEventListener('click', ()=>{
+    if(search.style.border == "2px solid green"){
+        search.style.border = "none"
+        search_bar.style.width = "0"
+    }else{
+        search.style.border = "2px solid green"
+        search_bar.style.width = "calc(50vw - 40px)"
+    }
+       
+})
 
 
