@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
+    <link media="screen and (max-width: 700px)" rel="stylesheet" href="signin.css">
     <script src="https://kit.fontawesome.com/76acaa6079.js"></script>
 </head>
 <body>
@@ -13,20 +14,15 @@
         <div id="back">
             <div class="create">
                 <form onsubmit="validate()">
-                    <h2>Create a Free Account</h2>
+                    <h2 style="text-align:center;">Sign In</h2>
                     <input type="text" placeholder="Enter Username" id="username">
                     <p class="already" id="user"></p>
 
-                    <input type="text" placeholder="Email" id="email">
-                    <p class="already" id="em"></p>
-
                     <input type="password" placeholder="Create Password" id="password">
 
-                    <input type="password" placeholder="Confirm Password" id="confirm-password">
+                    <input type="submit" value="Sign in" id="submit">
 
-                    <input type="submit" value="Sign Up" id="submit">
-
-                    <p style="color: black ;">Already have an Account? <a href="login.html">Sign In</a></p>
+                    <p style="color: black ;">Don't have an Account? <a href="#">Sign Up</a></p>
                 </form>
             </div>
         </div>
@@ -42,7 +38,7 @@
                     <a href="#">Affiliate</a>
                     <a href="#">FAQ's</a>
                     <a href="#">About Us</a>
-                    <a href="#" id="login">Log In</a>
+                    <a href="index.html" id="login">Sign Up</a>
                 </div>
             </header>
             <div class="welcome">
