@@ -80,8 +80,8 @@ nav {
 .recommended, .bestselling {
     display: flex;
     width: 100%;
-    min-height: 200px;
-    max-height: 230px;
+    min-height: 210px;
+    max-height: 240px;
     background: var(--recommended);
     padding: 8px;
     white-space: nowrap;
@@ -92,13 +92,13 @@ nav {
 .rec, .best {
    background-color: white; 
    border-radius: 10px;
-   min-width: 150px;
+   min-width: 170px;
    padding: 7px;
    font-size: 13px;
    margin-right: 8px;
 }
 .rec img, .best img {
-    height: 100px;
+    height: 110px;
     width: 100%;
 }
 .rec span, .best span {
@@ -197,6 +197,7 @@ span .amount {
     }
     .top-menu a {
         font-weight: 700;
+        font-size: 12px;
         position: relative;
         background-color: transparent;
         color: black;
