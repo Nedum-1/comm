@@ -12,12 +12,16 @@
 <body>
     <header>
         <h1>S<span>hopage</span></h1>
+        <div class="search">
+            <input type="text" placeholder="Search" id="search_bar">
+            <i class="fas fa-search" id="search_button"></i>
+        </div>
         <div class="top">
             
             <div class="top-menu">
                 <a href="shopage.html"><i class="fas fa-home"></i> Home</a>
                 <a href="#"><i class="fas fa-bell"></i> Notifications</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-no">3</span></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-no"></span></a>
                 <a href="#"><i class="fas fa-question-circle"></i> Help</a>
             </div>
         </div>
@@ -32,10 +36,11 @@
         <div id="images">
             
             <div id="img1">
+                <span id="price"></span>
                 <img id="image1" src="" alt="">
             </div>
             <div class="details">
-                <span id="price"></span>
+                
                 <h2 id="name"></h2>
                 <span id="rating">Rating: </span>
                 <hr>

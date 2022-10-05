@@ -92,14 +92,16 @@ put =(val)=>{
     purchase.appendChild(add)
     add.classList.add('add')
     add.innerHTML = "Add to Cart"
-
+    var order = false
     add.addEventListener('click', ()=>{
-        alert(val.name +' Successfully added')
-        add.innerHTML = "Added to Cart"
-        add.style.background = "gray" 
-        count++
-        cart.innerHTML = count
-        cart.style.display = ""
+        if(add.innerHTML == "Add to Cart"){
+            add.innerHTML = "Added"
+            add.style.background = "gray" 
+            count++
+            cart.innerHTML = count
+            cart.style.display = ""
+            order = true
+        }  
     })
 
     img.addEventListener('click', ()=>{
@@ -108,7 +110,8 @@ put =(val)=>{
             image: val.image,
             rating: val.rating,
             amount: val.amount,
-            details: val.details
+            details: val.details,
+            order: order
         }
         localStorage.setItem('details', JSON.stringify(details))
     })
